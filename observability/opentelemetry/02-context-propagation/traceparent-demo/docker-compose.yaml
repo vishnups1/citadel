@@ -1,0 +1,12 @@
+services:
+  nginx:
+    build: ./nginx                  # official nginx image with ngx_otel_module + our config baked in
+    ports:
+      - "8080:80"
+    depends_on:
+      - app
+
+  app:
+    build: ./app
+    expose:
+      - "8000"                      # internal only; reach it through nginx
