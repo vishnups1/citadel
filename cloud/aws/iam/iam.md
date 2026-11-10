@@ -1,6 +1,6 @@
-### Roles
+## Roles
 
-#### Service Roles
+### Service Roles
 
 A service role is an IAM role that you create so that an AWS service can do work in your account on your behalf.
 
@@ -44,7 +44,7 @@ A service role is an IAM role that you create so that an AWS service can do work
 }
 ```
 
-#### Service Linked Roles
+### Service Linked Roles
 
 A service-linked role is a role that an AWS service owns and uses to manage resources in your account on your behalf. AWS defines it completely.
 
@@ -79,7 +79,7 @@ It never touches what your application code does, that’s the job of the task r
 +------------------------------------------------------|------------------------------------------------------------------------------------+
 ```
 
-#### Pass Role
+### Pass Role
 
 `iam:PassRole` is the permission that lets you hand a service role to an AWS service. 
 
