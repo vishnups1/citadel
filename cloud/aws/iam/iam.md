@@ -65,7 +65,9 @@ Creation of these roles are usually automatic, the first time you use a feature 
 - `Task execution role`
 - `Task role`
 
-AWSServiceRoleForECS is the role ECS uses to manage the AWS resources around your tasks: networking, load balancers, service discovery, and so on. It never touches what your application code does, that’s the job of the task role. Only `ecs.amazonaws.com` is trusted to assume it, and its permissions come from the AWS-managed policy `AmazonECSServiceRolePolicy`.
+`AWSServiceRoleForECS` is the role ECS uses to manage the AWS resources around your tasks: networking, load balancers, service discovery, and so on.
+
+It never touches what your application code does, that’s the job of the task role. Only `ecs.amazonaws.com` is trusted to assume it, and its permissions come from the AWS-managed policy `AmazonECSServiceRolePolicy`.
 
 ```bash
 → aws iam list-roles --path-prefix /aws-service-role/ --query "Roles[?contains(RoleName, 'ECS')].RoleName" --output table
